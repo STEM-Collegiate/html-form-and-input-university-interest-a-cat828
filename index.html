@@ -5,20 +5,21 @@
     <header>
         <h1>STEM Collegiate University Visit Registration</h1>
         <h2> Student Information</h2>
-        <form action="/register" method="post"></form>
+        <form action="/register" method="post">
         <fieldset>
-            <label for="firstname">first name:</label>
+            <label for="firstname">First name:</label>
 <input type="text" id="firstname" name="firstname" placeholder="Enter your firstname">
 <label for="lastname">last name:</label>
 <input type="text" id="lastname" name="lastname" placeholder="Enter your last name">
-<label for="Email">Email(school email preferred):</label>
+<label for="Email">Email (school email preferred):</label>
 <input type="text" id="Email" name="Email" placeholder="Enter your email">
 <label for="gradelevel">Enter your grade level</label>
 <input type="number" id="gradelevel" name="gradelevel" placeholder="10" min="9" max="12" step="1">
-<label for="universityrepresentatives">questions or comments for university representatives:</label>
-<input type="text" id="universityrepresentatives" name="universityrepresentatives" placeholder="wher is U of A?">
+<label for="universityrepresentatives">Questions or comments for university representatives:</label>
+<input type="textarea" id="universityrepresentatives" name="universityrepresentatives" placeholder="Where is U of A?">
         </fieldset>
     </header>
+    <main>
 <fieldset>
     <label for="topUniversity">Select your top university:</label>
 <select id="topUniversity" name="topUniversity">
@@ -28,10 +29,56 @@
   <option value="UofT">University of Toronto</option>
   <option value="UofBC">University of British Columbia</option>
 </select>
-
 </fieldset>
-
-</body>
+<fieldset>
+<label>What universities do you plan to visit?</label><br>
+<label for="UofA">University of Alberta</label>
+<input type="checkbox" id="UofA" name="University" value="UofA">
+<label for="UofC">University of Calgary</label>
+<input type="checkbox" id="UofC" name="University" value="UofC">
+<label for="UofT">University of Toronto</label>
+<input type="checkbox" id="UofT" name="University" value="UofT">
+<label for="UofBC">University of British Columbia</label>
+<input type="checkbox" id="UoBC" name="University" value="UoBC">
+</fieldset>
+<fieldset>
+    <label>Choose your preferred session format</label><br>
+<label for="In-person">In-person Presentation</label>
+<input type="radio" id="In-person" name="session-format" value="In-person">
+<label for="Virtual">Virtual Q&A</label>
+<input type="radio" id="Virtual" name="session-format" value="Virtual">
+</fieldset>
+<fieldset>
+<label for="interest">Interest level (casual interest left, strong interest right) </label>
+<input type="range" id="interest" name="interest" min="0" max="100" step="2" value="50">
+</fieldset>
+</main> 
   <footer>
+    <fieldset>
+     <label>Choose your date to attend</label><br>
+     <label for="dateInput">Pick a date:</label>
+<input type="date" id="dateInput" name="dateInput" value="2025-10-11">
+</fieldset>
+    <fieldset>
+     <label>Choose your time to attend</label><br>
+   <label for="starttime">Start time:</label>
+<input type="time" id="starttime" name="time">
+ <label for="starttime">End time:</label>
+<input type="time" id="starttime" name="time">
+    </fieldset>
+    <fieldset>
+    <label for="badge-color">Choose a badge color (used for organizing group sessions)</label>
+<input type="color" id="badge-color" name="badge-color" value="#ff0000">
+</fieldset>
+ <fieldset>
+    <label> You agree to follow event guidelines and attend registered sessions</label><br>
+<label for="yes">YES</label>
+<input type="checkbox" id="yes" name="agree" value="yes">
+</fieldset>
+<fieldset>
+<input type="submit" value="register">
+</fieldset>
+</form>
   </footer>
+  </body>
 </html>
